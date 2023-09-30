@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 | 55.Ders(select, chechbox ve radio elementleri) </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/extra.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <form class="col">
+                <form>
+                <div class="mb-3 row">
+                    <label class="form-label col-sm-2 col-xl-1">E-Posta:</label>
+                   <div class="col-sm-10 col-xl-11">
+                    <input type="email" class="form-control-plaintext" id="myEmail" aria-describedby="emailHelper" placeholder="e-posta adresinizi giriniz..." aria-label="eposta adresi giris kutusu">
+                    <div class="form-text" id="emailHelper">E-Posta adresiniz asla paylasilmayacak</div>
+                </div>
+                </div>
+                 <div class="mb-3 row">
+                    <label class="form-label col-sm-2 col-xl-1" for="myPassword">Sifreniz:</label>
+                    <div class="col-sm-10 col-xl-11">
+                    <input type="password" class="form-control" id="myPassword">
+                   <div id="passwordHelper" class="form-text">Sifreniz 8-20 karakter uzunlugunda olmali. Buyuk harf, kucuk harf ve rakamlardan olusmali.</div>
+                </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="form-label col-sm-2 col-xl-1" for="myArea">Aciklama:</label>
+                    <div class="col-sm-10 col-xl-11">
+                    <textarea class="form-control" id="myArea" rows="4"></textarea>
+                </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="form-label col-sm-2 col-xl-1" for="myFile">Dosya Yukle:</label>
+                    <div class="col-sm-10 col-xl-11">
+                    <input type="file" class="form-control form-control-lg" id="myFile">
+                </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="form-label col-sm-2 col-xl-1" for="myColor">Renk Sec:</label>
+                    <div class="col-sm-10 col-xl-11">
+                    <input type="color" class="form-control form-control-color" id="myColor" title="rengini sec">   
+                </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="form-label col-sm-2 col-xl-1" for="myDatalist">Sehir Sec:</label>
+                    <div class="col-sm-10 col-xl-11">
+                    <input placeholder="Veri Ara..." class="form-control" id="myDatalist" list="dataOptions">
+                    <datalist id="dataOptions">
+                        <option value="Hopa">
+                        <option value="Zonguldak">
+                        <option value="Sakarya">
+                        <option value="Samsun">
+                        <option value="Eskisehir">
+                        <option value="Ankara">
+                        </datalist>   
+                </div>
+                </div>
+                <div class="mb-3 form-check row">
+                    <div class="offset-sm-2 offset-xl-1">
+                    <input type="checkbox" class="form-check-input"id="remember">  
+                    <label class="form-check-label" for="remember">Beni Hatirla</label>
+                </div>
+                </div>
+                <div class="offset-sm-2 offset-xl-1 text-center">
+                <button type="button" class="btn btn-success">Giris Yap</button>
+                </div> 
+            </form>
+
+
+            </div><!-- col end-->
+        </div><!-- row end-->
+    </div><!-- container end -->
+    
+
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+
+        <script>
+            var tTrigger = document.getElementById('btnToast');
+            var myToast = document.getElementById('myToast');
+            tTrigger.addEventListener('click', function () {
+                var toast = new bootstrap.Toast(myToast, {
+                    animation: true,
+                    autohide: true,
+                    delay: 700
+                     });
+                toast.show();
+           });
+        </script>
+
+
+
+</body>
+
+</html>
